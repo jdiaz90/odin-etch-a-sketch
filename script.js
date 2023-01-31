@@ -1,6 +1,7 @@
 const root = document.querySelector(':root');
 root.style.setProperty('--container-width', '480px');
 let width = getComputedStyle(root).getPropertyValue('--container-width')
+let rainbow = false
 
 start()
 
@@ -8,6 +9,7 @@ function start(){
 
     const sizeGrid = document.querySelector('#sizePicker')
     const sizeSelection = document.querySelector('#sizeSelection')
+    const rainbowButton = document.querySelector('#rainbow')
     let size = 16   
 
     sizeGrid.min = 1
@@ -24,6 +26,19 @@ function start(){
         size = e.target.value
         fillContainer(size)
     })
+
+    rainbowButton.addEventListener('click', () => {
+        if(!rainbow) {
+            rainbow = true
+            rainbowButton.classList.toggle('checked')
+        } else { 
+            rainbow = false
+            rainbowButton.classList.toggle('checked')
+        }
+    })
+
+
+
 
     fillContainer(size)
 
@@ -49,7 +64,10 @@ function fillContainer(size){
             col.classList.add('col')
 
             col.addEventListener('mouseenter', (e) => {
-                e.target.style.backgroundColor = colorPicker.value
+                if(!rainbow)
+                    e.target.style.backgroundColor = colorPicker.value
+                else
+                    e.target.style.backgroundColor = generateRandomColor()     
             })
 
             row.append(col)
@@ -70,4 +88,15 @@ function calculateSize(size){
     root.style.setProperty('--col-width', sizeGrid);
     root.style.setProperty('--row-height', sizeGrid);
 
+}
+
+function generateRandomColor(){
+	const characters = "0123456789ABCDEF";
+	let color = '#';
+
+	for(var i = 0; i < 6; i++){
+		color = color + characters[Math.floor(Math.random() * 16)];
+	}
+
+    return color
 }

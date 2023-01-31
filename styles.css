@@ -28,6 +28,16 @@ input[type='range']{
     accent-color: black;
 }
 
+button#rainbow{
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+button#rainbow.checked{
+    background-color: black;
+    color: white;
+}
+
 .container{
     background-color: white;
     box-sizing: border-box;
