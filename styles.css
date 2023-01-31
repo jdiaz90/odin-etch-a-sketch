@@ -13,6 +13,10 @@
     font-family: 'Tangerine', Courier, monospace;
 }
 
+body{
+    background-image: url('./images/background.jpg');
+}
+
 .top{
     font-size: 30px;
     margin: auto;
@@ -20,7 +24,13 @@
     width: var(--container-width);
 }
 
+input[type='range']{
+    accent-color: black;
+}
+
 .container{
+    background-color: white;
+    box-sizing: border-box;
     border: 1px black solid;
     margin: auto;
     width: var(--container-width);
