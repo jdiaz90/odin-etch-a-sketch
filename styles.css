@@ -1,17 +1,24 @@
+:root {
+    --col-width: 30px;
+    --container-width: 480px;
+    --row-height: 30px;
+  }
+
 @font-face {
     font-family:"Tangerine";
     src: url("./fonts/Tangerine-Bold.ttf") format("truetype");
-  }
+}
 
-  *{
+*{
     font-family: 'Tangerine', Courier, monospace;
-  }
+}
 
-:root {
-    --col-width: 60px;
-    --container-width: 960px;
-    --row-height: 60px;
-  }
+.top{
+    font-size: 30px;
+    margin: auto;
+    margin-bottom: 20px;
+    width: var(--container-width);
+}
 
 .container{
     border: 1px black solid;
@@ -32,8 +39,4 @@ h1{
 .col{
     box-sizing: border-box;
     width: var(--col-width);
-}
-
-#paint{
-    background-color: black;
 }

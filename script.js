@@ -1,7 +1,11 @@
 function fillContainer() {
 
+    const colorPicker = document.querySelector('#colorPicker')
     const container = document.querySelector('.container')
+    let root = document.querySelector(':root')
     let col, row
+
+    alert(colorPicker.value)
     
     for(let i=1; i <= 16; i++){
 
@@ -13,7 +17,7 @@ function fillContainer() {
             col.classList.add('col')
 
             col.addEventListener('mouseenter', (e) => {
-                e.target.id = 'paint'
+                e.target.style.backgroundColor = colorPicker.value
             })
 
             row.append(col)
