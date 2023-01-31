@@ -1,3 +1,12 @@
+@font-face {
+    font-family:"Tangerine";
+    src: url("./fonts/Tangerine-Bold.ttf") format("truetype");
+  }
+
+  *{
+    font-family: 'Tangerine', Courier, monospace;
+  }
+
 :root {
     --col-width: 60px;
     --container-width: 960px;
@@ -8,6 +17,11 @@
     border: 1px black solid;
     margin: auto;
     width: var(--container-width);
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
 }
 
 .row{
