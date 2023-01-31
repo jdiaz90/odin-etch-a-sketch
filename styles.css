@@ -1,0 +1,21 @@
+:root {
+    --col-width: 60px;
+    --container-width: 960px;
+    --row-height: 60px;
+  }
+
+.container{
+    border: 1px black solid;
+    margin: auto;
+    width: var(--container-width);
+}
+
+.col{
+    box-sizing: border-box;
+    width: var(--col-width);
+}
+
+.row{
+    display: flex;
+    height: var(--row-height);
+}
