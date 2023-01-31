@@ -11,7 +11,11 @@ function fillContainer() {
         for(let i=1; i <= 16; i++){
             col = document.createElement('div')
             col.classList.add('col')
-            col.textContent = 'X'
+
+            col.addEventListener('mouseenter', (e) => {
+                e.target.id = 'paint'
+            })
+
             row.append(col)
         }
 

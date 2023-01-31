@@ -10,12 +10,16 @@
     width: var(--container-width);
 }
 
+.row{
+    display: flex;
+    height: var(--row-height);
+}
+
 .col{
     box-sizing: border-box;
     width: var(--col-width);
 }
 
-.row{
-    display: flex;
-    height: var(--row-height);
+#paint{
+    background-color: black;
 }
